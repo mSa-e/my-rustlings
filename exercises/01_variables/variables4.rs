@@ -1,8 +1,8 @@
 // TODO: Fix the compiler error.
 fn main() {
-    let x = 3;
-    println!("Number {x}");
+    let mut x = 3; // making x mutable to be able to change the value it owns
+    println!("Number {}", x);
 
     x = 5; // Don't change this line
-    println!("Number {x}");
+    println!("Number {}", x);
 }
