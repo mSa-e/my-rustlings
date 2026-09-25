@@ -4,11 +4,13 @@
 // the signatures for now.
 
 fn is_even(num: i64) -> bool {
+    // If even it will return true (10 Rustbucks off ;>) ,but if not will return false and only 3 Rustbucks off ;<
     num % 2 == 0
 }
 
 // TODO: Fix the function signature.
-fn sale_price(price: i64) -> {
+fn sale_price(price: i64) -> i64 {
+    // Inserting the return dataType (which is i64)
     if is_even(price) {
         price - 10
     } else {
