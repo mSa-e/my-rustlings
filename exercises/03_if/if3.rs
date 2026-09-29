@@ -3,11 +3,11 @@ fn animal_habitat(animal: &str) -> &str {
     let identifier = if animal == "crab" {
         1
     } else if animal == "gopher" {
-        2.0
+        2 // Changing the return datatype from `f32` to `i32` to be compatiabe with the other return types
     } else if animal == "snake" {
         3
     } else {
-        "Unknown"
+        0 // Changing the return datatype from `&str` to `i32` to be compatiabe with the other return types
     };
 
     // Don't change the expression below!

@@ -2,14 +2,21 @@
 fn picky_eater(food: &str) -> &str {
     if food == "strawberry" {
         "Yummy!"
+    } else if food == "potato" {
+        "I guess I can eat that."
     } else {
-        1
+        "No thanks!"
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    let food: &str = "Rock";
+    println!("{}", picky_eater(food));
 }
+
+// (rustlings run if2.rs)cargo test → build modules → run tests → ❌ FAIL → panic! → exit code 101
+
+// So, we have to follow the rules that the tests expects to pass it
 
 // TODO: Read the tests to understand the desired behavior.
 // Make all tests pass without changing them.
