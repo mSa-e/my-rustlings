@@ -18,7 +18,22 @@ fn main() {
     // from a different language than your own, try an emoji 😉
     // let your_character = '';
 
+    // Special character test
+    let your_character: char = '#';
+
     if your_character.is_alphabetic() {
+        println!("Alphabetical!");
+    } else if your_character.is_numeric() {
+        println!("Numerical!");
+    } else {
+        println!("Neither alphabetic nor numeric!");
+    }
+
+    // Emoji test
+    let your_character: char = '😉';
+
+    if your_character.is_alphabetic() {
+        // crab emoji
         println!("Alphabetical!");
     } else if your_character.is_numeric() {
         println!("Numerical!");
