@@ -4,10 +4,14 @@ fn vec_loop(input: &[i32]) -> Vec<i32> {
     for element in input {
         // TODO: Multiply each element in the `input` slice by 2 and push it to
         // the `output` vector.
-    }
 
-    output
+        output.push(*element * 2); // .push() to push a character 
+    } // *element = If element only without * will be the using the refrence only but with * using the borroed value itself
+
+    output // Returning the output
 }
+
+//////////////
 
 fn vec_map_example(input: &[i32]) -> Vec<i32> {
     // An example of collecting a vector after mapping.
@@ -21,12 +25,7 @@ fn vec_map(input: &[i32]) -> Vec<i32> {
     // by 2, but with iterator mapping instead of manually pushing into an empty
     // vector.
     // See the example in the function `vec_map_example` above.
-    input
-        .iter()
-        .map(|element| {
-            // ???
-        })
-        .collect()
+    input.iter().map(|element| element * 2).collect()
 }
 
 fn main() {
