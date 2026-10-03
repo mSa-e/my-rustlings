@@ -1,10 +1,10 @@
 // TODO: Fix the compiler error in this function.
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let vec = vec;
+    let mut vec = vec; // Just making the vector mutable by adding `mut`
 
     vec.push(88);
 
-    vec
+    vec // outputting the vector
 }
 
 fn main() {

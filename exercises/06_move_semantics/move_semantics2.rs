@@ -1,9 +1,10 @@
-fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let mut vec = vec;
+fn fill_vec(vec: &[i32]) -> Vec<i32> {
+    // making it for refrencing instead `vec: Vec<i32>` -> `vec: &[i32]` refrence sliced array
+    let mut vect = vec.to_vec(); // turning it into a vector
 
-    vec.push(88);
+    vect.push(88);
 
-    vec
+    vect
 }
 
 fn main() {
@@ -20,7 +21,7 @@ mod tests {
     fn move_semantics2() {
         let vec0 = vec![22, 44, 66];
 
-        let vec1 = fill_vec(vec0);
+        let vec1 = fill_vec(&vec0); // Adding `&` for refrencing
 
         assert_eq!(vec0, [22, 44, 66]);
         assert_eq!(vec1, [22, 44, 66, 88]);
